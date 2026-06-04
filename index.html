@@ -21,8 +21,12 @@
         font-family: "Noto Serif Georgian";
       }
       header {
+        position: fixed;
+        width: 85%;
         background: #0a0a0a;
         padding-inline: 120px;
+        top: 0%;
+        z-index: 1;
         display: flex;
         justify-content: space-between;
         border-bottom: 5px solid #300101;
@@ -34,13 +38,13 @@
         gap: 40px;
         padding-top: 30px;
       }
-      a {
+      li > a {
         text-decoration: none;
         font-family: "Kelly Slab";
         color: #dcdcdc;
         font-size: 40px;
       }
-      a:hover {
+      li > a:hover {
         background: #8d0000;
         border-style: double;
         opacity: 50%;
@@ -63,8 +67,9 @@
       }
 
       .dropdown-content a:hover {
-        background-color: #8b0000;
-        color: #dcdcdc;
+        background: #8d0000;
+        border-style: double;
+        opacity: 50%;
       }
       .dropdown:hover .dropdown-content {
         display: block;
@@ -174,17 +179,23 @@
         list-style-position: inside;
         padding: 10px 50px;
       }
+      label:hover {
+        opacity: 50%;
+      }
       .container:last-child {
         align-items: flex-start;
       }
       button {
         background: #8d0000;
         padding: 8px 10px;
+        border: none;
+      }
+      button > a {
         font-family: "Jura";
         font-weight: bold;
         font-size: 20px;
         color: #dcdcdc;
-        border: none;
+        text-decoration: none;
       }
       button:hover {
         opacity: 50%;
@@ -433,7 +444,7 @@
               <span>Судебные процессы и приговоры</span>
             </label>
           </div>
-          <button type="submit">проголосовать</button>
+          <button type="submit"><a href="#">проголосовать</a></button>
         </form>
       </section>
     </main>
